@@ -6,7 +6,9 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import AuthLayout from "./layouts/AuthLayout";
 import MainLayout from "./layouts/MainLayout";
-import Buttons from "./pages/Buttons";
+import Button from "./pages/Button";
+import Modal from "./pages/Modal";
+
 
 export default function Router() {
   let element = useRoutes([
@@ -23,7 +25,8 @@ export default function Router() {
         { path: "/", element: <Home /> },
         { path: "home", element: <Home /> },
         { path: "about", element: <About /> },
-        { path: "buttons", element: <Buttons /> },
+        { path: "button", element: <Button /> },
+        { path: "modal", element: <Modal /> },
       ],
     },
   ]);
