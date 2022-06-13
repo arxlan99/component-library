@@ -25,14 +25,16 @@ const Button = () => {
                 </div>
               )}
               {!active && (
-                <CopyBlock
-                  language={"jsx"}
-                  text={simpleButtons}
-                  showLineNumbers={false}
-                  theme={dracula}
-                  wrapLines={true}
-                  codeBlock
-                />
+                <div className="code_block_container">
+                  <CopyBlock
+                    language={"jsx"}
+                    text={simpleButtons}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines={true}
+                    codeBlock
+                  />
+                </div>
               )}
             </div>
           </div>
@@ -50,14 +52,16 @@ const Button = () => {
                   </div>
                 )}
                 {!active && (
-                  <CopyBlock
-                    language={"jsx"}
-                    text={""}
-                    showLineNumbers={false}
-                    theme={dracula}
-                    wrapLines={true}
-                    codeBlock
-                  />
+                  <div className="code_block_container">
+                    <CopyBlock
+                      language={"jsx"}
+                      text={""}
+                      showLineNumbers={false}
+                      theme={dracula}
+                      wrapLines={true}
+                      codeBlock
+                    />
+                  </div>
                 )}
               </div>
             </div>

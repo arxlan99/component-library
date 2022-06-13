@@ -22,14 +22,16 @@ const Input = () => {
                 </div>
               )}
               {!active && (
-                <CopyBlock
-                  language={"jsx"}
-                  text={blueInput}
-                  showLineNumbers={false}
-                  theme={dracula}
-                  wrapLines={true}
-                  codeBlock
-                />
+                <div className="code_block_container">
+                  <CopyBlock
+                    language={"jsx"}
+                    text={blueInput}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines={true}
+                    codeBlock
+                  />
+                </div>
               )}
             </div>
           </div>
@@ -45,14 +47,16 @@ const Input = () => {
                 </div>
               )}
               {!active && (
-                <CopyBlock
-                  language={"jsx"}
-                  text={redInput}
-                  showLineNumbers={false}
-                  theme={dracula}
-                  wrapLines={true}
-                  codeBlock
-                />
+                <div className="code_block_container">
+                  <CopyBlock
+                    language={"jsx"}
+                    text={redInput}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines={true}
+                    codeBlock
+                  />
+                </div>
               )}
             </div>
           </div>
