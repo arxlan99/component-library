@@ -1,62 +1,68 @@
 import React from "react";
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
+import BigBlueButton from "../components/buttons/BigBlueButton";
+import BigWhiteButton from "../components/buttons/BigWhiteButton";
+import SimpleBlueButton from "../components/buttons/SimpleBlueButton";
+import SimpleWhiteButton from "../components/buttons/SimpleWhiteButton";
 import { sample } from "../components/code-blocks";
+import ShowCard from "../components/ShowCard";
 
 const Button = () => {
-  const [language, changeLanguage] = useState("jsx");
-  const [languageDemo, changeDemo] = useState(sample["jsx"]);
-  const [lineNumbers, toggleLineNumbers] = useState(true);
+  const [simpleButtons] = useState(sample["simpleButtons"]);
+  const [bigButtons] = useState(sample["bigButtons"]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-16">
+      <ShowCard title="Simple">
+        {(active) => (
+          <div>
+            <div>
+              {active && (
+                <div className="h-64 flex justify-center items-center gap-4">
+                  <SimpleWhiteButton />
+                  <SimpleBlueButton />
+                </div>
+              )}
+              {!active && (
+                <CopyBlock
+                  language={"jsx"}
+                  text={simpleButtons}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  wrapLines={true}
+                  codeBlock
+                />
+              )}
+            </div>
+          </div>
+        )}
+      </ShowCard>
       <div>
-        <div className="flex gap-4 my-4">
-          <button
-            type="button"
-            className="text-black shadow bg-white border-[1px] border-gray-300 focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-sm px-2.5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
-          >
-            Default
-          </button>
-          <button
-            type="button"
-            className="text-white shadow bg-blue-600 border-[1px] border-blue-500 focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-sm px-2.5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
-          >
-            Blue
-          </button>
-        </div>
-        <CopyBlock
-          language={language}
-          text={languageDemo}
-          showLineNumbers={lineNumbers}
-          theme={dracula}
-          wrapLines={true}
-          codeBlock
-        />
-      </div>
-      <div>
-        <div className="flex gap-4 my-4">
-          <button
-            type="button"
-            className="text-black shadow bg-white border-[1px] focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-base px-5 py-2  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
-          >
-            Default
-          </button>
-          <button
-            type="button"
-            className="text-white shadow bg-blue-600 border-[1px] border-blue-500 focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-base px-5 py-2  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
-          >
-            Blue
-          </button>
-        </div>
-        <CopyBlock
-          language={language}
-          text={languageDemo}
-          showLineNumbers={lineNumbers}
-          theme={dracula}
-          wrapLines={true}
-          codeBlock
-        />
+        <ShowCard title="Big">
+          {(active) => (
+            <div>
+              <div>
+                {active && (
+                  <div className="h-64 flex justify-center items-center gap-4">
+                    <BigWhiteButton />
+                    <BigBlueButton />
+                  </div>
+                )}
+                {!active && (
+                  <CopyBlock
+                    language={"jsx"}
+                    text={""}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines={true}
+                    codeBlock
+                  />
+                )}
+              </div>
+            </div>
+          )}
+        </ShowCard>
       </div>
     </div>
   );

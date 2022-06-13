@@ -1,172 +1,50 @@
 const codeBlocks = {
-  bash: `echo Hello World`,
-  c: `int main(void)
-{
-  puts("Hello World!");
-  return EXIT_SUCCESS;
-}
+  jsx: `<input
+  className="outline-none border border-[#D1D5DB] py-[10px] px-[12px] rounded-md text-sm w-72focus:border-[#9B9DFD] focus:ring-4 ring-[#E1E1FE] transition-all"
+  type="text"
+  placeholder="Placeholder"
+  />
 `,
-  clojure: `(defn hello []
-  (println "Hello world!"))
-(hello)
-`,
-  cpp: `#include <iostream.h>
-main() {
-  cout << "Hello World!" << endl;
-  return 0;
-}`,
-  csharp: `class HelloWorld {
- static void Main() {
-  System.Console.WriteLine("Hello, World!");
- }
-}`,
-  dart: `main() {
-  print("Hello world!");
-}
-`,
-  elixir: `defmodule Greetings do
-  def hello_world, do:
-    hello("world" )
+  blueInput: `
+  
+  <input
+      className="outline-none border border-[#D1D5DB] py-[10px] px-[12px] rounded-md text-sm w-72 focus:border-[#9B9DFD] focus:ring-4 ring-[#E1E1FE] transition-all"
+      type="text"
+      placeholder="Placeholder"
+  />
 
 
-  defp  hello(recipient) do
-  IO.puts(
-  "hello #{recipient}"
-  )
-  end
-end`,
-  elm: `import Text
-main = Text.plainText "Hello, world!"
 `,
-  erlang: `
--module(hello).
--export([hello/0]).
-hello() ->
-io:format("Hello World!~n", []).
-`,
-  fsharp: `printf "Hello World!\n"`,
-  graphql: `query FirstSevenStarShips {
-  allStarships(first: 7) {
-    edges {
-      node {
-        id
-        name
-        model
-        costInCredits
-      }
-    }
-}
-`,
-  go: `package main
-import "fmt"
-func main() {
-  fmt.Printf("Hello World\n")
-}
-`,
-  groovy: `println "Hello World"`,
-  haskell: `main = putStrLn "Hello World"`,
-  html: `<html>
-<!-- Hello World in HTML -->
-<head>
-<title>Hello World!</title>
-</head>
-<body>
-Hello World!
-</body>
-</html>
-`,
-  java: `class HelloWorld {
-  static public void main( String args[] ) {
-    System.out.println( "Hello World!" );
-  }
-}`,
-  javascript: `var sys = require("sys");
-sys.puts("Hello World");
-`,
-  jsx: `class HelloMessage extends React.Component {
-  handlePress = () => {
-    alert('Hello')
-  }
-  render() {
-    return (
-      <div>
-        <p>Hello {this.props.name}</p>
-        <button onClick={this.handlePress}>Say Hello</button>
-      </div>
-    );
-  }
-}
+  redInput: `
+  
+  <input
+      className="outline-none border border-[#D1D5DB] py-[10px] px-[12px] rounded-md text-sm w-72 focus:border-[#FCA5A5] focus:ring-4 ring-[#FEE2E2] transition-all"
+      type="text"
+      placeholder="Placeholder"
+  />
 
-ReactDOM.render(
-  <HelloMessage name="Taylor" />, 
-  mountNode 
-);`,
-  julia: `println("Hello, World!")`,
-  kotlin: `fun main(args : Array<String>) {
-  println("Hello, world!")
-}
-`,
-  lisp: `(defun hello-world()
-"Display the string hello world."
-  (interactive)
-  (message "hello world"))
-`,
-  makefile: `all:
-  @echo "Hello world!"
-`,
-  matlab: `disp("Hello World");`,
-  objectivec: `#include <stdio.h>
-#include <objpak.h>
-int
-main (int argc, char **argv)
-{
-  id set =[Set new];
-  argv++;
-  while (--argc)
-  [set add: [String str:*argv++]];
-  [set
-   do
-  :{
-    :each | printf ("hello, %s!\n",[each str]);
-   }
-  ];
-  return 0;
-  }
-`,
-  ocaml: `print_string "Hello World!\n";;`,
-  php: `<?php
-  echo "Hello World!";
-?>
-`,
-  python: `# Hello world in Python 2
-print "Hello World"
 
-# Hello world in Python 3 (aka Python 3000)
-print("Hello World")
-`,
-  r: `cat("Hello world\n")`,
-  ruby: `puts "Hello World!"`,
-  rust: `fn main() {
-  println!("Hello World!");
-}
-`,
-  scala: `object HelloWorld extends App {
-  println("Hello world!")
-}
-`,
-  sql: `SELECT "Hello World";`,
-  swift: `println("Hello, world!")`,
-  tsx: `import * as React from "react";
+  `,
+  simpleButtons: `
+  <div className="flex justify-center items-center gap-4">
+    <button
+        type="button"
+        className="text-black shadow bg-white border-[1px] border-gray-300 focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-sm px-2.5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
+      >
+        Default
+    </button>
 
-export class HelloWorld extends React.Component<any, any> {
-    render() {
-        return <div>Hello world!It's from Helloword Component.</div>;
-    }
-}`,
-  typescript: `var exclamation: string = "Hello";
-var noun: string = "World";
-console.log(exclamation + noun);
+    <button
+        type="button"
+        className="text-white shadow bg-blue-600 border-[1px] border-blue-500 focus:ring hover:shadow-md focus:ring-blue-300 font-medium rounded-md text-sm px-2.5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-shadow"
+      >
+        Blue
+    </button>
+  </div>
+
+
 `,
+  bigButtons: ``,
 };
 
 export default codeBlocks;

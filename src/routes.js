@@ -8,7 +8,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import MainLayout from "./layouts/MainLayout";
 import Button from "./pages/Button";
 import Modal from "./pages/Modal";
-
+import Input from "./pages/Input";
 
 export default function Router() {
   let element = useRoutes([
@@ -27,6 +27,7 @@ export default function Router() {
         { path: "about", element: <About /> },
         { path: "button", element: <Button /> },
         { path: "modal", element: <Modal /> },
+        { path: "inputs", element: <Input /> },
       ],
     },
   ]);

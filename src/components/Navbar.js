@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <nav className="flex justify-between shadow py-4 px-36">
+      <nav className="flex justify-between shadow py-4 px-72">
         <div className="flex justify-between gap-4">
           <div>
             <Link to="home"> Home</Link>

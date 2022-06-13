@@ -5,8 +5,10 @@ export default function MainLayout() {
   return (
     <>
       <Navbar />
-      <div className="my-6 mx-32">
-        <Outlet />
+      <div className="my-6 w-screen flex justify-center">
+        <div className="w-2/3 ">
+          <Outlet />
+        </div>
       </div>
     </>
   );
