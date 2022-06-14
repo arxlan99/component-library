@@ -1,9 +1,4 @@
-import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
-import { sample } from "../components/code-blocks";
+import { useRef, useEffect, useState } from "react";
 
 let useClickOutside = (handler) => {
   let domNode = useRef();
@@ -26,10 +21,6 @@ let useClickOutside = (handler) => {
 };
 
 const Modal = () => {
-  const [language, changeLanguage] = useState("jsx");
-  const [languageDemo, changeDemo] = useState(sample["jsx"]);
-  const [lineNumbers, toggleLineNumbers] = useState(true);
-
   let [isOpen, setIsOpen] = useState(false);
 
   let domNode = useClickOutside(() => {
@@ -37,24 +28,22 @@ const Modal = () => {
   });
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-center mt-24">
-        <div ref={domNode} className="relative inline-block text-left">
-          <div>
-            <span className="rounded-md shadow-sm">
-              <button
-                onClick={() => setIsOpen((isOpen) => !isOpen)}
-                type="button"
-                className="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
-              >
-                Modal
-              </button>
-            </span>
-          </div>
+    <div>
+      <div ref={domNode} className="relative inline-block text-left ">
+        <div>
+          <span className="rounded-md shadow-sm">
+            <button
+              onClick={() => setIsOpen((isOpen) => !isOpen)}
+              type="button"
+              className="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
+            >
+              Modal
+            </button>
+          </span>
         </div>
       </div>
       <div
-        className={`bg-gray-100/30 w-screen h-screen fixed top-0 left-0 flex justify-center items-center z-50 ${
+        className={`bg-gray-100/30 w-screen h-screen fixed top-0 left-0 flex justify-center items-center z-50 rounded-lg ${
           isOpen ? "scale-100 " : "scale-0"
         }`}
       >
@@ -79,16 +68,6 @@ const Modal = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <CopyBlock
-          language={language}
-          text={languageDemo}
-          showLineNumbers={lineNumbers}
-          theme={dracula}
-          wrapLines={true}
-          codeBlock
-        />
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ const Home = () => {
           icon="🔥"
           name="Sidebar"
           componentCount={5}
-          link="sidebar"
+          link="sidebars"
           bgColor="bg-orange-300"
         />
         <Card
