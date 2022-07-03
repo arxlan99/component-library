@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import BigBlueButton from "../components/buttons/BigBlueButton";
@@ -9,8 +8,8 @@ import { sample } from "../components/code-blocks";
 import ShowCard from "../components/ShowCard";
 
 const Button = () => {
-  const [simpleButtons] = useState(sample["simpleButtons"]);
-  const [bigButtons] = useState(sample["bigButtons"]);
+  const [simpleButtons] = useState(sample.simpleButtons);
+  const [bigButtons] = useState(sample.bigButtons);
 
   return (
     <div className="flex flex-col gap-16">
@@ -27,11 +26,11 @@ const Button = () => {
               {!active && (
                 <div className="code_block_container">
                   <CopyBlock
-                    language={"jsx"}
+                    language="jsx"
                     text={simpleButtons}
                     showLineNumbers={false}
                     theme={dracula}
-                    wrapLines={true}
+                    wrapLines
                     codeBlock
                   />
                 </div>
@@ -54,11 +53,11 @@ const Button = () => {
                 {!active && (
                   <div className="code_block_container">
                     <CopyBlock
-                      language={"jsx"}
-                      text={""}
+                      language="jsx"
+                      text=""
                       showLineNumbers={false}
                       theme={dracula}
-                      wrapLines={true}
+                      wrapLines
                       codeBlock
                     />
                   </div>

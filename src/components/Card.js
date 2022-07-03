@@ -1,14 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({ icon, componentCount, name, link, bgColor }) => {
   return (
     <div
-      className={`${
-        bgColor ? bgColor : "bg-white"
-      } border-2 border-black rounded-lg py-7 flex flex-col item px-7 text-left hover:shadow-xl transition-all cursor-pointer`}
-    >
+      className={` border-2 border-black rounded-lg py-7 flex flex-col item px-7 text-left hover:shadow-xl transition-all cursor-pointer ${
+        bgColor || "bg-white"
+      }`}>
       <Link to={`/${link}`}>
         <div className="text-xl">{icon}</div>
         <div className="text-lg font-medium mt-4">{name}</div>

@@ -1,4 +1,3 @@
-import React from "react";
 import CaretDown from "./CaretDownIcon";
 
 export default function Select(props) {
@@ -7,8 +6,7 @@ export default function Select(props) {
       <select
         {...props}
         value={props.value}
-        className="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-      >
+        className="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
         {props.options}
       </select>
       <div className="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">

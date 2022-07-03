@@ -1,21 +1,11 @@
-import React from "react";
-
-const Logo = props => (
+const Logo = (props) => (
   <a
     href="https://github.com/rajinwonderland/react-code-blocks"
     target="_blank"
-    rel="noopener noreferrer"
-  >
+    rel="noopener noreferrer">
     <svg viewBox="0 250 1000 500" cursor="pointer" {...props}>
       <defs>
-        <g
-          fillRule="evenodd"
-          clipRule="evenodd"
-          fill="#fff"
-          stroke="none"
-          strokeWidth={1}
-          id="a"
-        >
+        <g fillRule="evenodd" clipRule="evenodd" fill="#fff" stroke="none" strokeWidth={1} id="a">
           <path
             d="M0 17v63h100V17H0zm91 53H9V39h82v31z"
             transform="translate(31.203 409.445) scale(2.703) translate(.5 -16.5)"
@@ -36,8 +26,7 @@ const Logo = props => (
           width={291.127}
           height={199.221}
           maskUnits="userSpaceOnUse"
-          strokeWidth={0}
-        >
+          strokeWidth={0}>
           <path d="M31.203 409.445H304.219V590.5550000000001H31.203z" />
           <use xlinkHref="#a" fill="#fff" stroke="#fff" />
         </mask>
@@ -48,24 +37,17 @@ const Logo = props => (
           width={615.363}
           height={56.017}
           maskUnits="userSpaceOnUse"
-          strokeWidth={0}
-        >
+          strokeWidth={0}>
           <path d="M362.77 474.538H973.0409999999999V525.462H362.77z" />
           <use xlinkHref="#b" fill="#fff" stroke="#fff" />
         </mask>
       </defs>
       <path fill="#fff" d="M-166.667 0H1166.6660000000002V1000H-166.667z" />
       <g mask="url(#c)">
-        <path
-          fill="#ff3c46"
-          d="M31.203 409.445H304.219V590.5550000000001H31.203z"
-        />
+        <path fill="#ff3c46" d="M31.203 409.445H304.219V590.5550000000001H31.203z" />
       </g>
       <g mask="url(#d)">
-        <path
-          fill="#4c4b59"
-          d="M362.77 474.538H973.0409999999999V525.462H362.77z"
-        />
+        <path fill="#4c4b59" d="M362.77 474.538H973.0409999999999V525.462H362.77z" />
       </g>
     </svg>
   </a>

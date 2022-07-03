@@ -1,12 +1,11 @@
-import React from "react";
-
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { sample } from "../components/code-blocks";
 import SimpleFooter from "../components/footers/SimpleFooter";
 import ShowCard from "../components/ShowCard";
+
 const FootersPage = () => {
-  const [blueInput] = useState(sample["blueInput"]);
+  const [blueInput] = useState(sample.blueInput);
 
   return (
     <div className="flex flex-col gap-16">
@@ -22,11 +21,11 @@ const FootersPage = () => {
               {!active && (
                 <div className="code_block_container">
                   <CopyBlock
-                    language={"jsx"}
+                    language="jsx"
                     text={blueInput}
                     showLineNumbers={false}
                     theme={dracula}
-                    wrapLines={true}
+                    wrapLines
                     codeBlock
                   />
                 </div>
