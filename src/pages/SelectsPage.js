@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { sample } from "../components/code-blocks";
+import SimpleSelect from "../components/selects/SimpleSelect";
 import ShowCard from "../components/ShowCard";
-import Tabs from "../components/tabs/Tabs";
 
-const TabsPage = () => {
+const SelectsPage = () => {
   const [blueInput] = useState(sample.blueInput);
+  const [redInput] = useState(sample.redInput);
 
   return (
-    <div className="flex flex-col gap-16 ">
+    <div className="flex flex-col gap-16">
       <ShowCard title="Simple">
         {(active) => (
           <div>
             <div>
               {active && (
-                <div className="h-96 flex justify-center items-center bg-[#F9FAFB]">
-                  <Tabs />
+                <div className="h-64 flex justify-center items-center">
+                  <SimpleSelect />
                 </div>
               )}
               {!active && (
@@ -38,4 +39,4 @@ const TabsPage = () => {
   );
 };
 
-export default TabsPage;
+export default SelectsPage;

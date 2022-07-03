@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { sample } from "../components/code-blocks";
-import Modal from "../components/modals/Modal";
+import AlertInput from "../components/inputs/AlertInput";
+import SimpleInput from "../components/inputs/SimpleInput";
 import ShowCard from "../components/ShowCard";
 
-const ModalPage = () => {
+const Input = () => {
   const [blueInput] = useState(sample.blueInput);
+  const [redInput] = useState(sample.redInput);
 
   return (
     <div className="flex flex-col gap-16">
@@ -15,7 +17,7 @@ const ModalPage = () => {
             <div>
               {active && (
                 <div className="h-64 flex justify-center items-center">
-                  <Modal />
+                  <SimpleInput />
                 </div>
               )}
               {!active && (
@@ -34,8 +36,33 @@ const ModalPage = () => {
           </div>
         )}
       </ShowCard>
+      <ShowCard title="Alert">
+        {(active) => (
+          <div>
+            <div>
+              {active && (
+                <div className="h-64 flex justify-center items-center">
+                  <AlertInput />
+                </div>
+              )}
+              {!active && (
+                <div className="code_block_container">
+                  <CopyBlock
+                    language="jsx"
+                    text={redInput}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines
+                    codeBlock
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </ShowCard>
     </div>
   );
 };
 
-export default ModalPage;
+export default Input;

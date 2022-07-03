@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
+import ErrorAlert from "../components/alerts/ErrorAlert";
+import SimpleAlert from "../components/alerts/SuccessAlert";
+import WarningAlert from "../components/alerts/WarningAlert";
 import { sample } from "../components/code-blocks";
-import AlertInput from "../components/inputs/AlertInput";
-import SimpleInput from "../components/inputs/SimpleInput";
 import ShowCard from "../components/ShowCard";
 
-const Input = () => {
+const AlertsPage = () => {
   const [blueInput] = useState(sample["blueInput"]);
-  const [redInput] = useState(sample["redInput"]);
 
   return (
     <div className="flex flex-col gap-16">
@@ -18,7 +18,7 @@ const Input = () => {
             <div>
               {active && (
                 <div className="h-64 flex justify-center items-center">
-                  <SimpleInput />
+                  <SimpleAlert />
                 </div>
               )}
               {!active && (
@@ -37,20 +37,45 @@ const Input = () => {
           </div>
         )}
       </ShowCard>
-      <ShowCard title="Alert">
+      <ShowCard title="Simple">
         {(active) => (
           <div>
             <div>
               {active && (
                 <div className="h-64 flex justify-center items-center">
-                  <AlertInput />
+                  <ErrorAlert />
                 </div>
               )}
               {!active && (
                 <div className="code_block_container">
                   <CopyBlock
                     language={"jsx"}
-                    text={redInput}
+                    text={blueInput}
+                    showLineNumbers={false}
+                    theme={dracula}
+                    wrapLines={true}
+                    codeBlock
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </ShowCard>
+      <ShowCard title="Simple">
+        {(active) => (
+          <div>
+            <div>
+              {active && (
+                <div className="h-64 flex justify-center items-center">
+                  <WarningAlert />
+                </div>
+              )}
+              {!active && (
+                <div className="code_block_container">
+                  <CopyBlock
+                    language={"jsx"}
+                    text={blueInput}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines={true}
@@ -66,4 +91,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default AlertsPage;

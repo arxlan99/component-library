@@ -1,31 +1,32 @@
+import React from "react";
+
 import { useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { sample } from "../components/code-blocks";
+import SimpleFooter from "../components/footers/SimpleFooter";
 import ShowCard from "../components/ShowCard";
-import Tabs from "../components/tabs/Tabs";
-
-const TabsPage = () => {
-  const [blueInput] = useState(sample.blueInput);
+const FootersPage = () => {
+  const [blueInput] = useState(sample["blueInput"]);
 
   return (
-    <div className="flex flex-col gap-16 ">
+    <div className="flex flex-col gap-16">
       <ShowCard title="Simple">
         {(active) => (
           <div>
             <div>
               {active && (
-                <div className="h-96 flex justify-center items-center bg-[#F9FAFB]">
-                  <Tabs />
+                <div className="">
+                  <SimpleFooter />
                 </div>
               )}
               {!active && (
                 <div className="code_block_container">
                   <CopyBlock
-                    language="jsx"
+                    language={"jsx"}
                     text={blueInput}
                     showLineNumbers={false}
                     theme={dracula}
-                    wrapLines
+                    wrapLines={true}
                     codeBlock
                   />
                 </div>
@@ -38,4 +39,4 @@ const TabsPage = () => {
   );
 };
 
-export default TabsPage;
+export default FootersPage;
