@@ -12,7 +12,7 @@ const Button = () => {
   const [bigButtons] = useState(sample.bigButtons);
 
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-16 ">
       <ShowCard title="Simple">
         {(active) => (
           <div>
@@ -54,7 +54,7 @@ const Button = () => {
                   <div className="code_block_container">
                     <CopyBlock
                       language="jsx"
-                      text=""
+                      text={bigButtons}
                       showLineNumbers={false}
                       theme={dracula}
                       wrapLines

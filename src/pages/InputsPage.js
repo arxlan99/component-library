@@ -6,8 +6,8 @@ import SimpleInput from "../components/inputs/SimpleInput";
 import ShowCard from "../components/ShowCard";
 
 const Input = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [simpleInput] = useState(sample.simpleInput);
+  const [alertInput] = useState(sample.alertInput);
 
   return (
     <div className="flex flex-col gap-16">
@@ -24,7 +24,7 @@ const Input = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={simpleInput}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines
@@ -49,7 +49,7 @@ const Input = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={redInput}
+                    text={alertInput}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

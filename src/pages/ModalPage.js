@@ -5,7 +5,7 @@ import Modal from "../components/modals/Modal";
 import ShowCard from "../components/ShowCard";
 
 const ModalPage = () => {
-  const [blueInput] = useState(sample.blueInput);
+  const [modal] = useState(sample.modal);
 
   return (
     <div className="flex flex-col gap-16">
@@ -22,7 +22,7 @@ const ModalPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={modal}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

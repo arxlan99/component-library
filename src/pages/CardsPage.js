@@ -5,8 +5,7 @@ import { sample } from "../components/code-blocks";
 import ShowCard from "../components/ShowCard";
 
 const CardsPage = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [cards] = useState(sample.cards);
 
   return (
     <div className="flex flex-col gap-16">
@@ -23,7 +22,7 @@ const CardsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={cards}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

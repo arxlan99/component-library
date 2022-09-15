@@ -7,6 +7,8 @@ import { sample } from "../components/code-blocks";
 import ShowCard from "../components/ShowCard";
 
 const AlertsPage = () => {
+  const [errorAlert] = useState(sample.errorAlert);
+  const [successAlert] = useState(sample.successAlert);
   const [blueInput] = useState(sample.blueInput);
 
   return (
@@ -24,7 +26,7 @@ const AlertsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={successAlert}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines
@@ -49,7 +51,7 @@ const AlertsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={errorAlert}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines
@@ -74,7 +76,7 @@ const AlertsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={WarningAlert}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

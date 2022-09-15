@@ -5,7 +5,7 @@ export default function MainLayout() {
   return (
     <>
       <Navbar />
-      <div className="my-6 w-screen flex justify-center">
+      <div className="my-6 flex justify-center">
         <div className="w-2/3 ">
           <Outlet />
         </div>

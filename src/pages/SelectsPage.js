@@ -5,8 +5,7 @@ import SimpleSelect from "../components/selects/SimpleSelect";
 import ShowCard from "../components/ShowCard";
 
 const SelectsPage = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [select] = useState(sample.select);
 
   return (
     <div className="flex flex-col gap-16">
@@ -23,7 +22,7 @@ const SelectsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={select}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

@@ -5,8 +5,7 @@ import SimplePagination from "../components/pagination/SimplePagination";
 import ShowCard from "../components/ShowCard";
 
 const PaginationPage = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [pagination] = useState(sample.pagination);
 
   return (
     <div className="flex flex-col gap-16">
@@ -23,7 +22,7 @@ const PaginationPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={pagination}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

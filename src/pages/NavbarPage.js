@@ -5,8 +5,7 @@ import SimpleNavbar from "../components/navbars/SimpleNavbar";
 import ShowCard from "../components/ShowCard";
 
 const NavbarPage = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [navbar] = useState(sample.navbar);
 
   return (
     <div className="flex flex-col gap-16 ">
@@ -23,7 +22,7 @@ const NavbarPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={navbar}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

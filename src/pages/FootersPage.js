@@ -5,7 +5,7 @@ import SimpleFooter from "../components/footers/SimpleFooter";
 import ShowCard from "../components/ShowCard";
 
 const FootersPage = () => {
-  const [blueInput] = useState(sample.blueInput);
+  const [footer] = useState(sample.footer);
 
   return (
     <div className="flex flex-col gap-16">
@@ -22,7 +22,7 @@ const FootersPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={footer}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

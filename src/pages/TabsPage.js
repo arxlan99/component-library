@@ -5,7 +5,7 @@ import ShowCard from "../components/ShowCard";
 import Tabs from "../components/tabs/Tabs";
 
 const TabsPage = () => {
-  const [blueInput] = useState(sample.blueInput);
+  const [tabs] = useState(sample.tabs);
 
   return (
     <div className="flex flex-col gap-16 ">
@@ -22,7 +22,7 @@ const TabsPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={tabs}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines

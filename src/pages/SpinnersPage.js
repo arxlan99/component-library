@@ -6,8 +6,8 @@ import ButtonSpinner from "../components/spinners/ButtonSpinner";
 import SimpleSpinner from "../components/spinners/SimpleSpinner";
 
 const SpinnersPage = () => {
-  const [blueInput] = useState(sample.blueInput);
-  const [redInput] = useState(sample.redInput);
+  const [spinner] = useState(sample.spinner);
+  const [buttonSpinner] = useState(sample.buttonSpinner);
 
   return (
     <div className="flex flex-col gap-16">
@@ -24,7 +24,7 @@ const SpinnersPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={spinner}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines
@@ -49,7 +49,7 @@ const SpinnersPage = () => {
                 <div className="code_block_container">
                   <CopyBlock
                     language="jsx"
-                    text={blueInput}
+                    text={buttonSpinner}
                     showLineNumbers={false}
                     theme={dracula}
                     wrapLines
